@@ -1,0 +1,31 @@
+<div>
+    <h2>Products List api.2.0</h2>
+    <table border="2"  id="producttable" width=100%>
+        <thead>
+            <th>Product id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Operation</th>
+        </thead>
+        <tbody>
+        <tr id="tab" *ngFor="let product of products">
+            <td id ="t1">{{product.productId}}</td>
+            <td id ="t2">{{product.name}}</td>
+            <td id ="t3">{{product.description}}</td>
+            <td id ="t4">{{product.price}}</td>
+            <td>{{product.qty}}</td>
+            <!-- <td><button type="submit" class="btn btn-outline-warning mb-3"><a routerLink='/Update'>Update</a></button></td>
+            <td><button type="submit" class="btn btn-outline-danger mb-3"><a routerLink='/Delete'>delete</a></button></td> -->
+           <td><button class="btn btn-outline-warning"><a [routerLink]="['/Update/',product.productId]">Update</a></button></td>
+          <td><button *ngIf="product.productId!==undefined" (click)="deleteProduct(product.productId)" class="btn btn-outline-danger">Delte</button></td>
+        </tr>
+    </tbody>
+    </table>
+</div>
+
+    
+    
+        
+

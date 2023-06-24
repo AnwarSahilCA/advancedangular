@@ -1,0 +1,19 @@
+<div class="container">
+  <h4>Parent Component</h4>
+
+TO send whatever is entered in the text field to child component<br>
+Pass data:<input type="text"
+class="form-control"
+[(ngModel)]="enterName"/>
+
+<input type="button"
+value="send" (click)="transferData()"
+class="btn btn-primary"/><br>
+
+<!-- <app-home [parentData]=parentData></app-home> -->
+<h4>Received form child:Sum={{sum}}</h4>
+
+
+
+<!-- <app-about (sendData)="sendData($event)" (sendData2)="sendData2($event)"></app-about> -->
+</div>
